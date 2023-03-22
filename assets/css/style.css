@@ -7,4 +7,43 @@
 html,
 body {
   height: 100%;
+  font-family: "Oswald", sans-serif;
+}
+header {
+  background: hsl(100 30% 15%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 8px;
+  /* border: 2px solid white; */
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav-title-container {
+  color: white;
+  /* margin: 0 auto; */
+  /* border: 2px solid white; */
+}
+
+.nav-title-container span {
+  color: hsl(30 80% 55%);
 }
