@@ -50,10 +50,37 @@ i {
 
 .main-img {
   position: absolute;
+  margin-top: 65px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+}
+
+.main-content {
+  text-align: center;
+  height: 100vh;
+}
+
+.main-content h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.main-content p {
+  font-size: 2rem;
+  font-weight: 300;
+  color: hsl(100 30% 15%);
+}
+
+.main-content h2 span {
+  color: hsl(30 80% 55%);
+}
+
+.main-title-container {
+  padding-top: 15px;
 }
