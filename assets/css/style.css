@@ -9,12 +9,15 @@ body {
   height: 100%;
   font-family: "Oswald", sans-serif;
 }
+
 header {
   background: hsl(100 30% 15%);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 nav {
@@ -51,14 +54,14 @@ i {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }
 
 .main-content {
   text-align: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .main-content h2 {
@@ -88,7 +91,7 @@ i {
   align-items: center;
   justify-content: flex-end;
   gap: 2em;
-  height: 55%;
+  min-height: 50%;
 }
 
 .icons-container i {
@@ -120,7 +123,7 @@ footer {
   bottom: 0;
   width: 100%;
   display: flex;
-  position: absolute;
+  position: sticky;
 }
 
 footer p {
