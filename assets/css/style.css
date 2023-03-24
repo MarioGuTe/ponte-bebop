@@ -40,8 +40,6 @@ i {
 
 .nav-title-container {
   color: white;
-  /* margin: 0 auto; */
-  /* border: 2px solid white; */
 }
 
 .nav-title-container span {
@@ -50,7 +48,6 @@ i {
 
 .main-img {
   position: absolute;
-  margin-top: 65px;
   left: 0;
   top: 0;
   width: 100%;
@@ -83,4 +80,28 @@ i {
 
 .main-title-container {
   padding-top: 15px;
+}
+
+footer {
+  color: white;
+  background: hsl(100 30% 15%);
+  padding: 18px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+footer p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.footer-icons-container {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  padding-right: 16px;
 }
