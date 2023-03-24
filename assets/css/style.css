@@ -82,6 +82,37 @@ i {
   padding-top: 15px;
 }
 
+.icons-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2em;
+  height: 55%;
+}
+
+.icons-container i {
+  color: hsl(30 80% 55%);
+  font-size: 3rem;
+}
+
+.btns-container {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  background: hsl(30 80% 55%);
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+}
+
 footer {
   color: white;
   background: hsl(100 30% 15%);
