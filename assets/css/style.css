@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
 }
 
@@ -62,6 +62,7 @@ i {
 .main-content {
   text-align: center;
   height: 100%;
+  margin-top: 16%;
 }
 
 .main-content h2 {
@@ -116,6 +117,47 @@ button {
   letter-spacing: 1px;
 }
 
+/* Integrantes */
+.integrantes {
+  min-height: 100%;
+  margin-top: -12%;
+}
+
+.title-container-integrantes {
+  text-align: center;
+}
+
+.integrantes h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(30 80% 55%);
+}
+
+.title-container-integrantes p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: hsl(100 30% 15%);
+}
+
+/* .integrante-container + .integrante-container {
+  margin-top: 10px;
+} */
+
+.integrante-container {
+  background: blueviolet;
+  width: 75%;
+  height: 70%;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.integrante-container img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Footer */
 footer {
   color: white;
   background: hsl(100 30% 15%);
@@ -123,7 +165,7 @@ footer {
   bottom: 0;
   width: 100%;
   display: flex;
-  position: sticky;
+  position: fixed;
 }
 
 footer p {
