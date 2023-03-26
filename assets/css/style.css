@@ -82,6 +82,10 @@ i {
   color: hsl(30 80% 55%);
 }
 
+.description {
+  text-shadow: 1px 1px 1px white;
+}
+
 .main-title-container {
   padding-top: 15px;
 }
@@ -137,7 +141,7 @@ button {
 }
 
 .title-container-integrantes p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: hsl(100 30% 15%);
 }
@@ -151,10 +155,32 @@ button {
   margin-top: 8%;
 }
 
+.img-text {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  text-align: center;
+}
+
+.img-text h3 {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 4px 4px 4px hsl(100 30% 15%);
+}
+
+.img-text p {
+  color: hsl(30 80% 55%);
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 4px hsl(100 30% 15%);
+}
+
 .integrante-container {
   width: 80%;
   margin: 0 auto;
   border-radius: 15px;
+  z-index: -1;
+  position: relative;
 }
 .integrante-container img {
   object-fit: cover;
