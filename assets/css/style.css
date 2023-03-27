@@ -109,7 +109,7 @@ i {
   gap: 8px;
 }
 
-button {
+.btns-container button {
   background: hsl(30 80% 55%);
   padding: 12px 26px;
   border-radius: 10px;
@@ -229,6 +229,21 @@ button {
   border-radius: 6px;
 }
 
+/* Contacto */
+
+.contacto {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 90%;
+  height: 82%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px hsl(100 30% 10% / 0.2);
+}
 /* Footer */
 footer {
   color: white;
