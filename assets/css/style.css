@@ -124,18 +124,19 @@ button {
 /* Integrantes */
 .integrantes {
   min-height: 100%;
-  margin-top: 5%;
+  margin-top: 6%;
+  padding: 0.8em;
 }
 
 .title-container-integrantes {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .integrantes h2 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   color: hsl(30 80% 55%);
 }
@@ -161,11 +162,12 @@ button {
   left: 50%;
   transform: translate(-50%, -5%);
   text-align: center;
+  width: 100%;
 }
 
 .img-text h3 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
   text-shadow: 4px 4px 4px hsl(100 30% 15%);
 }
 
@@ -185,8 +187,46 @@ button {
 .integrante-container img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 640px;
   border-radius: 15px;
+}
+
+/* Biografía */
+.bio-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8em;
+  padding: 0.8em;
+  text-align: center;
+}
+
+.bio-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+
+.bio-text-container h2 {
+  color: hsl(30 80% 55%);
+  font-size: 1.8rem;
+}
+
+.bio-text-container p {
+  color: hsl(100 30% 15%);
+  font-size: 1.25rem;
+}
+
+.bio-img-container {
+  padding: 8px;
+}
+
+.bio-img-container img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 /* Footer */
