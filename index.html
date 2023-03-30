@@ -128,10 +128,11 @@
       <div class="bio-img-container">
         <img src="/assets/images/bio-b-w.jpg" alt="" />
       </div>
+      <br />
     </section>
     <section class="contacto">
       <form class="form" action="">
-        <div className="form-title">
+        <div class="form-title">
           <h2>CONTACTO</h2>
         </div>
         <div class="input-container">
@@ -146,18 +147,17 @@
             <span class="span-text">E-mail</span>
           </label>
         </div>
-        <div class="input-container">
-          <input type="text" name="name" autocomplete="off" required />
-          <label for="name" class="label-text">
-            <span class="span-text">Mensaje</span>
+        <div class="message-container">
+          <label for="name" class="label-textarea">
+            <span class="textarea-span-text">Mensaje</span>
           </label>
+          <textarea id="freeform" name="freeform" rows="4" cols="50"></textarea>
         </div>
         <div class="submit-btn-container">
-          <button type="submit" className="submit-btn">Registrarme</button>
+          <button type="submit" class="submit-btn">ENVIAR</button>
         </div>
       </form>
     </section>
-
     <footer>
       <p>© pontebebop</p>
       <div class="footer-icons-container">
