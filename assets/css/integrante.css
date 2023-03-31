@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+
+header {
+  background: hsl(100 30% 15%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 8px;
+
+  z-index: 1;
+}
+
+nav i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.nav-title-container {
+  color: white;
+}
+
+.nav-title-container span {
+  color: hsl(30 80% 55%);
+}
+
+/* main */
+.card {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 24%; */
+  gap: 3em;
+  box-shadow: 5px 5px 5px hsl(100 30% 10% / 0.25);
+  border-radius: 20px;
+  padding: 1.4em 1em;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 4px solid hsl(30 80% 55%);
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  display: flex;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile-name {
+  color: hsl(30 80% 55%);
+  font-size: 1.65rem;
+}
+
+.profile-name::after {
+  content: "";
+  display: block;
+  justify-content: center;
+  height: 1px;
+  width: 3em;
+  background: hsl(100 30% 15%/0.85);
+  margin: 0.7em auto 0.5em;
+}
+
+.profile-body {
+  text-align: center;
+}
+
+/* Icons */
+.links-section {
+  color: hsl(30 80% 55%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+}
+
+.icons-container {
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  color: white;
+  background: hsl(100 30% 15%);
+  padding: 18px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  border: 2px solid white;
+}
+
+footer p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.footer-icons-container {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  padding-right: 16px;
+  color: white;
+  font-size: 1.5rem;
+}
