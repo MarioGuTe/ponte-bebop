@@ -65,6 +65,7 @@ i {
   text-align: center;
   height: 100%;
   padding-top: 60px;
+  background: hsl(0 0% 100% / 0.38);
 }
 
 .main-content h2 {
@@ -76,20 +77,20 @@ i {
 
 .main-content p {
   font-size: 2rem;
-  font-weight: 300;
-  color: hsl(100 30% 15%);
+  font-weight: 400;
+  color: hsl(100 30% 10%);
 }
 
 .main-content h2 span {
   color: hsl(30 80% 55%);
 }
 
-.description {
-  text-shadow: 1px 1px 1px white;
-}
+/* .description {
+} */
 
 .main-title-container {
-  padding-top: 15px;
+  padding-top: 5%;
+  /* background: hsl(0 0% 100% / 0.2); */
 }
 
 .icons-btn-container {
@@ -98,7 +99,7 @@ i {
   align-items: center;
   justify-content: flex-end;
   gap: 2em;
-  min-height: 50%;
+  height: 55%;
 }
 
 .icons-container i {
