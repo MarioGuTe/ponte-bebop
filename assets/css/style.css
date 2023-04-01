@@ -416,3 +416,13 @@ footer p {
   right: 0;
   padding-right: 16px;
 }
+
+/* media queries */
+
+@media (min-width: 600px) {
+  .img-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+  }
+}
