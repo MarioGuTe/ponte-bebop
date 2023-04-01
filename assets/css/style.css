@@ -95,7 +95,7 @@ i {
   align-items: center;
   justify-content: flex-end;
   gap: 2em;
-  height: 55%;
+  height: 46%;
 }
 
 .icons-container i {
@@ -435,9 +435,13 @@ footer p {
   }
   .main-content {
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8em;
+    height: 100%;
   }
   .icons-btn-container {
-    height: 30%;
+    height: 5%;
   }
 }
 
@@ -446,5 +450,34 @@ footer p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.8em;
+  }
+
+  .main-content {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8em;
+    height: 100%;
+  }
+  .main-content h2 {
+    letter-spacing: 1px;
+    font-size: 2rem;
+  }
+  .main-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(100 30% 10%);
+  }
+  .icons-btn-container {
+  }
+
+  .icons-container i {
+    font-size: 2rem;
+  }
+
+  .btns-container button {
+    padding: 8px 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
   }
 }
