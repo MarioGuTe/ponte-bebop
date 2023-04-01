@@ -85,12 +85,8 @@ i {
   color: hsl(30 80% 55%);
 }
 
-/* .description {
-} */
-
 .main-title-container {
   padding-top: 5%;
-  /* background: hsl(0 0% 100% / 0.2); */
 }
 
 .icons-btn-container {
@@ -424,6 +420,24 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.8em;
+  }
+  header,
+  footer {
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+  .main-content {
+    padding-top: 10px;
+  }
+  .icons-btn-container {
+    height: 30%;
   }
 }
 
