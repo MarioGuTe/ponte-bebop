@@ -426,3 +426,11 @@ footer p {
     gap: 0.8em;
   }
 }
+
+@media (min-width: 1000px) {
+  .img-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8em;
+  }
+}
