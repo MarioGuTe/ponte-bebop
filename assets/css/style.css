@@ -413,6 +413,13 @@ footer p {
 
 /* media queries */
 
+@media (max-width: 300px) {
+  .btns-container button {
+    padding: 8px 16px;
+    font-size: 1.2rem;
+  }
+}
+
 @media (min-width: 600px) {
   .img-section {
     display: grid;
