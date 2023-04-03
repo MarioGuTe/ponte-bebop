@@ -19,7 +19,7 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 1000;
   padding: 20px;
 }
 
@@ -28,7 +28,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  z-index: 1;
+  z-index: 1000;
 }
 
 h1 {
@@ -105,6 +105,7 @@ i {
 .icons-container i {
   color: hsl(30 80% 55%);
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .btns-container {
@@ -122,11 +123,13 @@ i {
   font-weight: bold;
   font-family: "Oswald", sans-serif;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 /* Integrantes */
 .integrantes {
   min-height: 100%;
+  margin-top: 5%;
 }
 
 .title-container-integrantes {
@@ -185,6 +188,8 @@ i {
   border-radius: 15px;
   z-index: -1;
   position: relative;
+  cursor: pointer;
+  z-index: 1;
 }
 .integrante-container img {
   object-fit: cover;
@@ -199,6 +204,7 @@ i {
   gap: 0.8em;
   padding: 0.8em;
   text-align: center;
+  margin-top: 5%;
 }
 
 .bio-text-container {
