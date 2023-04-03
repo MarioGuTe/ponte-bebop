@@ -20,6 +20,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 1;
+  padding: 20px;
 }
 
 nav {
@@ -27,14 +28,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  padding: 8px;
   z-index: 1;
 }
 
 h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -271,7 +271,6 @@ i {
   margin-top: 4em;
   width: 80%;
   height: 180px;
-  /* overflow: hidden; */
 }
 
 .input-container input {
@@ -312,7 +311,6 @@ i {
   height: 100%;
   color: hsl(100 30% 15%);
   pointer-events: none;
-  /* border-bottom: 1px solid hsl(100 30% 15%); */
 }
 
 .input-container label::after {
@@ -393,13 +391,11 @@ i {
 footer {
   color: white;
   background: hsl(100 30% 15%);
-  /* padding: 18px; */
+  padding: 20px;
   bottom: 0;
   width: 100%;
-  height: 40px;
   display: flex;
   align-items: center;
-  position: fixed;
   z-index: 1;
 }
 
@@ -438,11 +434,6 @@ footer p {
     font-size: 0.8rem;
   }
   .main-content {
-    /* padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8em;
-    height: 100%; */
     min-height: 100%;
   }
   .icons-btn-container {
@@ -460,24 +451,21 @@ footer p {
   .main-content {
     min-height: 100%;
   }
-  /*
-  .main-content h2 {
-    letter-spacing: 1px;
-    font-size: 2rem;
-  }
-  .main-content p {
-    font-size: 1rem;
-    font-weight: 400;
-    color: hsl(100 30% 10%);
+
+  .bio-container {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    text-align: center;
   }
 
-  .icons-container i {
-    font-size: 2rem;
+  .bio-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .btns-container button {
-    padding: 8px 20px;
-    font-size: 1rem;
-    letter-spacing: 1px;
-  } */
+  .integrante-container img {
+    height: 500px;
+  }
 }
