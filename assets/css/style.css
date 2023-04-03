@@ -44,6 +44,8 @@ i {
 
 .nav-title-container {
   color: white;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 .nav-title-container span {
