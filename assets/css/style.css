@@ -32,7 +32,6 @@ nav {
 }
 
 h1 {
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 2rem;
   font-weight: bold;
@@ -73,7 +72,6 @@ i {
 }
 
 .main-content h2 {
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 2.5rem;
   font-weight: bold;
