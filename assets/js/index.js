@@ -3,21 +3,25 @@ const integrantes = [
     name: "BENNY GÓMEZ",
     description:
       "Benny Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+    image: "./assets/images/benny-gomez-full.JPG",
   },
   {
     name: "EMILIO HARTARD",
     description:
       "Emilio Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+    image: "./assets/images/emilio-b-w.png",
   },
   {
     name: "MARIO GUTIÉRREZ",
     description:
       "Mario Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+    image: "./assets/images/mario-b-g.png",
   },
   {
     name: "NICOLÁS PERALES",
     description:
       "Nicolás Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+    image: "./assets/images/nico-b-n.png",
   },
 ];
 
@@ -60,13 +64,15 @@ integranteContainer.forEach((container) => {
       if (container.dataset.integrante === member.name) {
         const memberName = member.name;
         const memberDescription = member.description;
-        console.log(memberName);
+        const memberImg = member.image;
+        console.log(memberImg);
 
         localStorage.setItem(
           "memberObject",
           JSON.stringify({
             object_name: memberName,
             object_description: memberDescription,
+            object_img: memberImg,
           })
         );
         // localStorage.setItem("name-key", memberName);
