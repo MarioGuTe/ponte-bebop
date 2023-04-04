@@ -51,11 +51,8 @@ aboutBtn.addEventListener("click", (e) => {
 });
 
 const toIntegrantePage = () => {
-  return (window.location = "./integrante.html");
+  return (window.location.href = "integrante.html");
 };
-// function toIntegrantePage() => {
-//   return location.href("integrante.html");
-// }
 
 integranteContainer.forEach((container) => {
   container.addEventListener("click", (e) => {
@@ -63,15 +60,18 @@ integranteContainer.forEach((container) => {
       if (container.dataset.integrante === member.name) {
         const memberName = member.name;
         const memberDescription = member.description;
-        localStorage.setItem("name-key", memberName);
-        localStorage.setItem("description-key", memberDescription);
-        // const profileMain = document.querySelector(".profile-main");
-        // console.log(profileMain);
-        // const profileName = document.createElement("h2");
-        // profileName.classList.add("profile-name");
-        // profileName.innerText = member.name;
-        // profileMain.appendChild(profileName);
-        window.location.href = "integrante.html";
+        console.log(memberName);
+
+        localStorage.setItem(
+          "memberObject",
+          JSON.stringify({
+            object_name: memberName,
+            object_description: memberDescription,
+          })
+        );
+        // localStorage.setItem("name-key", memberName);
+        // localStorage.setItem("description-key", memberDescription);
+        toIntegrantePage();
       }
     });
   });
