@@ -29,6 +29,8 @@ const contactBtn = document.querySelector(".contact-button");
 const aboutPage = document.getElementById("about-page");
 const aboutBtn = document.querySelector(".about-button");
 const integranteContainer = document.querySelectorAll(".integrante-container");
+// Integrante Page Selectors
+
 // const dataIntegrante = document.querySelectorAll("[data-integrante]");
 
 // Event Listeners
@@ -48,12 +50,28 @@ aboutBtn.addEventListener("click", (e) => {
   aboutPage.scrollIntoView({ behavior: "smooth" });
 });
 
+const toIntegrantePage = () => {
+  return (window.location = "./integrante.html");
+};
+// function toIntegrantePage() => {
+//   return location.href("integrante.html");
+// }
+
 integranteContainer.forEach((container) => {
   container.addEventListener("click", (e) => {
-    e.preventDefault();
     integrantes.map((member) => {
       if (container.dataset.integrante === member.name) {
-        return console.log(member.description);
+        const memberName = member.name;
+        const memberDescription = member.description;
+        localStorage.setItem("name-key", memberName);
+        localStorage.setItem("description-key", memberDescription);
+        // const profileMain = document.querySelector(".profile-main");
+        // console.log(profileMain);
+        // const profileName = document.createElement("h2");
+        // profileName.classList.add("profile-name");
+        // profileName.innerText = member.name;
+        // profileMain.appendChild(profileName);
+        window.location.href = "integrante.html";
       }
     });
   });
