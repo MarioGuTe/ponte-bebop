@@ -5,6 +5,8 @@ const integrantes = [
       "Benny Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/benny-gomez-full.JPG",
     instagram: "https://www.instagram.com/gmbenny_/",
+    mail: "mailto:mariogutierreztello@gmail.com",
+    whatsapp: "https://wa.me/56945867403",
   },
   {
     name: "EMILIO HARTARD",
@@ -12,6 +14,8 @@ const integrantes = [
       "Emilio Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/emilio-b-w.png",
     instagram: "https://www.instagram.com/emilio.andre.1914/",
+    mail: "mailto:mariogutierreztello@gmail.com",
+    whatsapp: "https://wa.me/56962363174",
   },
   {
     name: "MARIO GUTIÉRREZ",
@@ -20,6 +24,7 @@ const integrantes = [
     image: "./assets/images/mario-b-g.png",
     instagram: "https://www.instagram.com/mariogutierrezte/",
     mail: "mailto:mariogutierreztello@gmail.com",
+    whatsapp: "https://wa.me/56942642310",
   },
   {
     name: "NICOLÁS PERALES",
@@ -27,6 +32,8 @@ const integrantes = [
       "Nicolás Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/nico-b-n.png",
     instagram: "https://www.instagram.com/pera_less/",
+    mail: "mailto:mariogutierreztello@gmail.com",
+    whatsapp: "https://wa.me/56974303146",
   },
 ];
 
@@ -72,6 +79,7 @@ integranteContainer.forEach((container) => {
         const memberImg = member.image;
         const memberInstagram = member.instagram;
         const memberMail = member.mail;
+        const memberWhatsapp = member.whatsapp;
         console.log(memberImg);
 
         localStorage.setItem(
@@ -82,6 +90,7 @@ integranteContainer.forEach((container) => {
             object_img: memberImg,
             object_instagram: memberInstagram,
             object_mail: memberMail,
+            object_whatsapp: memberWhatsapp,
           })
         );
 
