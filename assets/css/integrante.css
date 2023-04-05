@@ -43,6 +43,10 @@ h1 {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav i,
 footer i {
   color: white;
@@ -118,6 +122,10 @@ footer i {
   font-size: 2rem;
   justify-content: space-between;
   align-items: center;
+}
+
+.icons-container i {
+  color: hsl(30 80% 55%);
 }
 
 /* Footer */

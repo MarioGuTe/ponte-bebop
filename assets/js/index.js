@@ -4,24 +4,28 @@ const integrantes = [
     description:
       "Benny Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/benny-gomez-full.JPG",
+    instagram: "https://www.instagram.com/gmbenny_/",
   },
   {
     name: "EMILIO HARTARD",
     description:
       "Emilio Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/emilio-b-w.png",
+    instagram: "https://www.instagram.com/emilio.andre.1914/",
   },
   {
     name: "MARIO GUTIÉRREZ",
     description:
       "Mario Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/mario-b-g.png",
+    instagram: "https://www.instagram.com/mariogutierrezte/",
   },
   {
     name: "NICOLÁS PERALES",
     description:
       "Nicolás Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/nico-b-n.png",
+    instagram: "https://www.instagram.com/pera_less/",
   },
 ];
 
@@ -65,6 +69,7 @@ integranteContainer.forEach((container) => {
         const memberName = member.name;
         const memberDescription = member.description;
         const memberImg = member.image;
+        const memberInstagram = member.instagram;
         console.log(memberImg);
 
         localStorage.setItem(
@@ -73,10 +78,10 @@ integranteContainer.forEach((container) => {
             object_name: memberName,
             object_description: memberDescription,
             object_img: memberImg,
+            object_instagram: memberInstagram,
           })
         );
-        // localStorage.setItem("name-key", memberName);
-        // localStorage.setItem("description-key", memberDescription);
+
         toIntegrantePage();
       }
     });
