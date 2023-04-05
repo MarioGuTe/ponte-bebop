@@ -19,6 +19,7 @@ const integrantes = [
       "Mario Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
     image: "./assets/images/mario-b-g.png",
     instagram: "https://www.instagram.com/mariogutierrezte/",
+    mail: "mailto:mariogutierreztello@gmail.com",
   },
   {
     name: "NICOLÁS PERALES",
@@ -70,6 +71,7 @@ integranteContainer.forEach((container) => {
         const memberDescription = member.description;
         const memberImg = member.image;
         const memberInstagram = member.instagram;
+        const memberMail = member.mail;
         console.log(memberImg);
 
         localStorage.setItem(
@@ -79,6 +81,7 @@ integranteContainer.forEach((container) => {
             object_description: memberDescription,
             object_img: memberImg,
             object_instagram: memberInstagram,
+            object_mail: memberMail,
           })
         );
 
