@@ -12,7 +12,7 @@ const integrantes = [
     name: "EMILIO HARTARD",
     description:
       "Emilio Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
-    image: "./assets/images/emilio-b-w.png",
+    image: "./assets/images/emilio-b-w-1.png",
     instagram: "https://www.instagram.com/emilio.andre.1914/",
     mail: "mailto:mariogutierreztello@gmail.com",
     whatsapp: "https://wa.me/56962363174",
