@@ -33,13 +33,8 @@ nav {
 
 h1 {
   letter-spacing: 1px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
-}
-
-i {
-  color: white;
-  font-size: 1.2rem;
 }
 
 .nav-title-container {
@@ -52,8 +47,10 @@ i {
   color: hsl(30 80% 55%);
 }
 
+/* desktop menu */
+
 ul {
-  display: flex;
+  display: none;
   gap: 1em;
   color: hsl(0 100% 100%/0.75);
 }
@@ -61,10 +58,21 @@ ul {
 ul > li {
   list-style: none;
   cursor: pointer;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
 }
 
 li:hover {
   color: hsl(30 80% 55%);
+}
+
+/* mobile menu */
+
+.burger-menu div {
+  background-color: hsl(0 100% 100%);
+  height: 2px;
+  width: 18px;
+  margin: 4.5px;
 }
 
 .main-img {
@@ -476,6 +484,14 @@ footer p {
 }
 
 @media (min-width: 600px) {
+  ul {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
   .img-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -487,7 +503,7 @@ footer p {
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   footer p {
