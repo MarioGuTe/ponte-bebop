@@ -13,7 +13,7 @@ console.log(memberObject.object_instagram);
 
 profileName.textContent = memberObject.object_name;
 profileBody.textContent = memberObject.object_description;
-profileImg.src = memberObject.object_img;
+profileImg.src = memberObject.object_img_small;
 memberInstagram.href = memberObject.object_instagram;
 memberMail.href = memberObject.object_mail;
 memberWhatsapp.href = memberObject.object_whatsapp;
