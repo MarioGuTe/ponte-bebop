@@ -52,6 +52,21 @@ i {
   color: hsl(30 80% 55%);
 }
 
+ul {
+  display: flex;
+  gap: 1em;
+  color: hsl(0 100% 100%/0.75);
+}
+
+ul > li {
+  list-style: none;
+  cursor: pointer;
+}
+
+li:hover {
+  color: hsl(30 80% 55%);
+}
+
 .main-img {
   position: absolute;
   left: 0;
