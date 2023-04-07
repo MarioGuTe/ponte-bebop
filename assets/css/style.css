@@ -108,6 +108,14 @@ i {
   color: hsl(30 80% 55%);
   font-size: 3rem;
   cursor: pointer;
+  will-change: transform;
+  transition: transform 450ms;
+  transition-delay: 180ms;
+}
+
+.icons-container i:hover {
+  transition: transform 250ms;
+  transform: translateY(-10px);
 }
 
 .btns-container {
@@ -126,6 +134,18 @@ i {
   font-family: "Oswald", sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
+}
+
+.contact-button,
+.about-button {
+  transition: transform 450ms;
+  transition-delay: 150ms;
+}
+
+.contact-button:hover,
+.about-button:hover {
+  transition: transform 250ms;
+  transform: translateY(-10px);
 }
 
 /* Integrantes */
