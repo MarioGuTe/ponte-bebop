@@ -369,9 +369,8 @@ li:hover {
 }
 
 .message-container {
-  margin-top: 4em;
+  margin-top: 2em;
   width: 80%;
-  height: 180px;
 }
 
 .input-container input {
@@ -385,13 +384,22 @@ li:hover {
   outline: none;
 }
 
+.message-container label {
+  font-size: 1.4rem;
+  width: 100%;
+  height: 100%;
+  color: hsl(100 30% 15%);
+  pointer-events: none;
+}
+
 .message-container textarea {
   width: 100%;
-  height: 90%;
+  height: 60%;
   font-size: 1.2rem;
   color: hsl(100 30% 15%);
   padding-top: 0.5em;
   padding-left: 0.4em;
+  border: 1px solid hsl(100 30% 15%);
 }
 
 .input-container label {
@@ -404,14 +412,6 @@ li:hover {
   color: hsl(100 30% 15%);
   pointer-events: none;
   border-bottom: 1px solid hsl(100 30% 15%);
-}
-
-.message-container label {
-  font-size: 1.4rem;
-  width: 100%;
-  height: 100%;
-  color: hsl(100 30% 15%);
-  pointer-events: none;
 }
 
 .input-container label::after {
@@ -446,7 +446,7 @@ li:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 1em;
   width: 100%;
 }
 .submit-btn {
@@ -570,6 +570,9 @@ footer p {
   .icons-btn-container {
     height: 5%;
   }
+  .form {
+    max-width: 450px;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -601,6 +604,6 @@ footer p {
   }
 
   .form {
-    max-width: 60%;
+    max-width: 550px;
   }
 }
