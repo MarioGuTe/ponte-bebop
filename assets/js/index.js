@@ -59,6 +59,8 @@ const contactBtn = document.querySelector(".contact-button");
 const aboutPage = document.getElementById("about-page");
 const aboutBtn = document.querySelector(".about-button");
 const integranteContainer = document.querySelectorAll(".integrante-container");
+const listLinks = document.querySelectorAll("ul li");
+const integrantesSection = document.querySelector(".integrantes");
 
 // Functions
 const navSlide = () => {
@@ -108,7 +110,7 @@ const toIntegrantePage = () => {
 };
 
 integranteContainer.forEach((container) => {
-  container.addEventListener("click", (e) => {
+  container.addEventListener("click", () => {
     integrantes.map((member) => {
       if (container.dataset.integrante === member.name) {
         const memberName = member.name;
@@ -137,5 +139,17 @@ integranteContainer.forEach((container) => {
         toIntegrantePage();
       }
     });
+  });
+});
+
+listLinks.forEach((link, index) => {
+  link.addEventListener("click", () => {
+    if (link.textContent === "Integrantes") {
+      integrantesSection.scrollIntoView({ behavior: "smooth" });
+    } else if (link.textContent === "Bio") {
+      aboutPage.scrollIntoView({ behavior: "smooth" });
+    } else if (link.textContent === "Contacto") {
+      contactPage.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
