@@ -41,6 +41,16 @@ const integrantes = [
   },
 ];
 
+// animation stopper
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animation-stopper");
+  }, 400);
+});
+
 // Selectors
 const navTitle = document.querySelector(".nav-title-container");
 const topPage = document.getElementById("top-page");
@@ -49,9 +59,32 @@ const contactBtn = document.querySelector(".contact-button");
 const aboutPage = document.getElementById("about-page");
 const aboutBtn = document.querySelector(".about-button");
 const integranteContainer = document.querySelectorAll(".integrante-container");
-// Integrante Page Selectors
 
-// const dataIntegrante = document.querySelectorAll("[data-integrante]");
+// Functions
+const navSlide = () => {
+  const list = document.querySelector("ul");
+  const burgerMenu = document.querySelector(".burger-menu");
+  const listLinks = document.querySelectorAll("ul li");
+
+  burgerMenu.addEventListener("click", () => {
+    list.classList.toggle("active");
+
+    // animation links
+    listLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `listLinkFade 0.5s ease forwards ${
+          index / 7 + 0.3
+        }s`;
+      }
+    });
+    // Burger animation
+    burgerMenu.classList.toggle("toggle-burger");
+  });
+};
+
+navSlide();
 
 // Event Listeners
 

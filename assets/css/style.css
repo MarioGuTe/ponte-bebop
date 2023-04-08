@@ -10,6 +10,15 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 header {
   background: hsl(100 30% 15%);
   width: 100%;
@@ -47,12 +56,23 @@ h1 {
   color: hsl(30 80% 55%);
 }
 
-/* desktop menu */
+/* mobile menu */
 
 ul {
-  display: none;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5em;
   color: hsl(0 100% 100%/0.75);
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  background: hsl(100 30% 15%);
+  height: 100vh;
+  width: 60%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
 }
 
 ul > li {
@@ -60,20 +80,53 @@ ul > li {
   cursor: pointer;
   letter-spacing: 0.5px;
   font-size: 1.2rem;
+  opacity: 0;
 }
 
 li:hover {
   color: hsl(30 80% 55%);
 }
 
-/* mobile menu */
+.burger-menu {
+  cursor: pointer;
+  transform: translateX(0%);
+  transition: transform 0.9s ease-out;
+}
 
 .burger-menu div {
   background-color: hsl(0 100% 100%);
   height: 2px;
   width: 18px;
   margin: 4.5px;
+  transition: all 0.3s ease;
 }
+
+.active {
+  transform: translateX(0%);
+}
+
+@keyframes listLinkFade {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+/* .toggle-burger .line-1 {
+  transform: rotate(-40deg) translate(-5px, 4.5px);
+}
+.toggle-burger .line-2 {
+  opacity: 0;
+}
+.toggle-burger .line-3 {
+  transform: rotate(40deg) translate(-5px, -4.5px);
+} */
+
+/* front page main section */
 
 .main-img {
   position: absolute;
@@ -486,6 +539,16 @@ footer p {
 @media (min-width: 600px) {
   ul {
     display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    gap: 1em;
+    justify-content: flex-end;
+    transform: translateX(0%);
+  }
+
+  ul > li {
+    opacity: 1;
   }
 
   .burger-menu {
