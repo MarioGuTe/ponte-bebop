@@ -37,6 +37,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 95%;
+
   z-index: 1000;
 }
 
@@ -115,16 +116,6 @@ li:hover {
     transform: translate(0px);
   }
 }
-
-/* .toggle-burger .line-1 {
-  transform: rotate(-40deg) translate(-5px, 4.5px);
-}
-.toggle-burger .line-2 {
-  opacity: 0;
-}
-.toggle-burger .line-3 {
-  transform: rotate(40deg) translate(-5px, -4.5px);
-} */
 
 /* front page main section */
 
@@ -306,10 +297,8 @@ li:hover {
 /* Biografía */
 .bio-container {
   min-height: 100%;
-  gap: 0.8em;
-  padding: 0.8em;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .bio-text-container {
@@ -347,7 +336,6 @@ li:hover {
 
 .contacto {
   min-height: 100%;
-  padding: 0.8em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,7 +351,6 @@ li:hover {
   justify-content: center;
   padding-bottom: 2em;
   margin: 0 auto;
-  /* gap: 0.5em; */
 }
 
 .form-title {
@@ -537,6 +524,10 @@ footer p {
 }
 
 @media (min-width: 600px) {
+  nav {
+    height: 100%;
+  }
+
   ul {
     display: flex;
     flex-direction: row;
@@ -545,6 +536,7 @@ footer p {
     gap: 1em;
     justify-content: flex-end;
     transform: translateX(0%);
+    height: 100%;
   }
 
   ul > li {

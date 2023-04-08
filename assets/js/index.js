@@ -61,6 +61,7 @@ const aboutBtn = document.querySelector(".about-button");
 const integranteContainer = document.querySelectorAll(".integrante-container");
 const listLinks = document.querySelectorAll("ul li");
 const integrantesSection = document.querySelector(".integrantes");
+const list = document.querySelector("ul");
 
 // Functions
 const navSlide = () => {
@@ -81,8 +82,6 @@ const navSlide = () => {
         }s`;
       }
     });
-    // Burger animation
-    burgerMenu.classList.toggle("toggle-burger");
   });
 };
 
@@ -142,7 +141,7 @@ integranteContainer.forEach((container) => {
   });
 });
 
-listLinks.forEach((link, index) => {
+listLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (link.textContent === "Integrantes") {
       integrantesSection.scrollIntoView({ behavior: "smooth" });
