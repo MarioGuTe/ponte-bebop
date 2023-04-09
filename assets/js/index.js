@@ -100,6 +100,10 @@ function sendEmail(e) {
     email_id: contactEmail.value,
     message: contactMessage.value,
   };
+  contactName.value = "";
+  contactEmail.value = "";
+  contactMessage.value = "";
+
   emailjs
     .send("service_05bgfvb", "template_3wxl3dn", params)
     .then(function (res) {
