@@ -62,6 +62,8 @@ const integranteContainer = document.querySelectorAll(".integrante-container");
 const listLinks = document.querySelectorAll("ul li");
 const integrantesSection = document.querySelector(".integrantes");
 const list = document.querySelector("ul");
+const form = document.querySelector(".form");
+const submitButton = document.querySelector(".submit-btn");
 
 // Functions
 const navSlide = () => {
@@ -86,6 +88,24 @@ const navSlide = () => {
 };
 
 navSlide();
+
+function sendEmail(e) {
+  e.preventDefault();
+  const contactName = document.querySelector(".contact-name");
+  const contactEmail = document.querySelector(".contact-email");
+  const contactMessage = document.querySelector(".contact-message");
+
+  var params = {
+    from_name: contactName.value,
+    email_id: contactEmail.value,
+    message: contactMessage.value,
+  };
+  emailjs
+    .send("service_05bgfvb", "template_3wxl3dn", params)
+    .then(function (res) {
+      alert("Success!" + res.status);
+    });
+}
 
 // Event Listeners
 
@@ -152,3 +172,5 @@ listLinks.forEach((link) => {
     }
   });
 });
+
+submitButton.addEventListener("click", sendEmail);
