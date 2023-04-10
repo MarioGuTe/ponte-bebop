@@ -132,13 +132,6 @@ a:visited {
   cursor: pointer;
 }
 
-nav i,
-footer i {
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
 /* main */
 .card {
   width: 88%;
@@ -233,6 +226,10 @@ footer p {
   padding-right: 16px;
   color: white;
   font-size: 1.5rem;
+}
+
+footer i {
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {

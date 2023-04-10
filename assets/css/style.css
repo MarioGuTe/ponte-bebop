@@ -493,7 +493,7 @@ li:hover {
 footer {
   color: white;
   background: hsl(100 30% 15%);
-  padding: 20px;
+  padding: 8px;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -513,6 +513,12 @@ footer p {
   position: absolute;
   right: 0;
   padding-right: 16px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+footer i {
+  cursor: pointer;
 }
 
 /* media queries */
@@ -553,8 +559,7 @@ footer p {
     grid-template-columns: 1fr 1fr;
     gap: 0.8em;
   }
-  header,
-  footer {
+  header {
     height: 30px;
   }
 
@@ -562,9 +567,6 @@ footer p {
     font-size: 1.6rem;
   }
 
-  footer p {
-    font-size: 0.8rem;
-  }
   .main-content {
     min-height: 100%;
   }
