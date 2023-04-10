@@ -60,34 +60,44 @@ const aboutPage = document.getElementById("about-page");
 const aboutBtn = document.querySelector(".about-button");
 const integranteContainer = document.querySelectorAll(".integrante-container");
 const listLinks = document.querySelectorAll("ul li");
+console.log(listLinks);
 const integrantesSection = document.querySelector(".integrantes");
 const list = document.querySelector("ul");
 const form = document.querySelector(".form");
 const submitButton = document.querySelector(".submit-btn");
-
+const burgerMenu = document.querySelector(".burger-menu");
 // Functions
-const navSlide = () => {
-  const list = document.querySelector("ul");
-  const burgerMenu = document.querySelector(".burger-menu");
-  const listLinks = document.querySelectorAll("ul li");
 
-  burgerMenu.addEventListener("click", () => {
-    list.classList.toggle("active");
-
-    // animation links
+document.onclick = function (e) {
+  if (e.target !== list && e.target !== burgerMenu) {
+    list.classList.remove("active");
     listLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
-      } else {
-        link.style.animation = `listLinkFade 0.5s ease forwards ${
-          index / 7 + 0.3
-        }s`;
+        console.log(link.style.animation);
       }
     });
-  });
+  } else if (e.target === list) {
+    list.classList.add("active");
+  }
 };
 
-navSlide();
+burgerMenu.addEventListener("click", () => {
+  list.classList.toggle("active");
+
+  // animation links
+  listLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+      console.log(link.style.animation);
+    } else {
+      link.style.animation = `listLinkFade 0.5s ease forwards ${
+        index / 7 + 0.3
+      }s`;
+      console.log(link.style.animation);
+    }
+  });
+});
 
 function sendEmail(e) {
   e.preventDefault();
