@@ -71,13 +71,41 @@ const form = document.querySelector(".form");
 const submitButton = document.querySelector(".submit-btn");
 // Functions
 
+const integrantePageDirection = localStorage.getItem("integrante-key");
+
+function toBio() {
+  if (integrantePageDirection === "Bio") {
+    aboutPage.scrollIntoView();
+    localStorage.removeItem("integrante-key");
+  }
+}
+
+toBio();
+
+function toIntegrantes() {
+  if (integrantePageDirection === "Integrantes") {
+    integrantesSection.scrollIntoView();
+    localStorage.removeItem("integrante-key");
+  }
+}
+
+toIntegrantes();
+
+function toContact() {
+  if (integrantePageDirection === "Contacto") {
+    contactPage.scrollIntoView();
+    localStorage.removeItem("integrante-key");
+  }
+}
+
+toContact();
+
 document.onclick = function (e) {
   if (e.target !== list && e.target !== burgerMenu) {
     list.classList.remove("active");
     listLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
-        console.log(link.style.animation);
       }
     });
   } else if (e.target === list) {
@@ -92,12 +120,10 @@ burgerMenu.addEventListener("click", () => {
   listLinks.forEach((link, index) => {
     if (link.style.animation) {
       link.style.animation = "";
-      console.log(link.style.animation);
     } else {
       link.style.animation = `listLinkFade 0.5s ease forwards ${
         index / 7 + 0.3
       }s`;
-      console.log(link.style.animation);
     }
   });
 });
@@ -129,16 +155,19 @@ function sendEmail(e) {
 navTitle.addEventListener("click", (e) => {
   e.preventDefault();
   topPage.scrollIntoView({ behavior: "smooth" });
+  console.log("1");
 });
 
 contactBtn.addEventListener("click", (e) => {
   e.preventDefault();
   contactPage.scrollIntoView({ behavior: "smooth" });
+  console.log("2");
 });
 
 aboutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   aboutPage.scrollIntoView({ behavior: "smooth" });
+  console.log("3");
 });
 
 const toIntegrantePage = () => {
@@ -156,8 +185,6 @@ integranteContainer.forEach((container) => {
         const memberInstagram = member.instagram;
         const memberMail = member.mail;
         const memberWhatsapp = member.whatsapp;
-
-        console.log(memberImg);
 
         localStorage.setItem(
           "memberObject",

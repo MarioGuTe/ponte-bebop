@@ -23,8 +23,6 @@ const listLinks = document.querySelectorAll("ul li");
 const list = document.querySelector("ul");
 const burgerMenu = document.querySelector(".burger-menu");
 
-console.log(memberObject.object_instagram);
-
 profileName.textContent = memberObject.object_name;
 profileBody.textContent = memberObject.object_description;
 profileImg.src = memberObject.object_img_small;
@@ -40,12 +38,10 @@ burgerMenu.addEventListener("click", () => {
   listLinks.forEach((link, index) => {
     if (link.style.animation) {
       link.style.animation = "";
-      console.log(link.style.animation);
     } else {
       link.style.animation = `listLinkFade 0.5s ease forwards ${
         index / 7 + 0.3
       }s`;
-      console.log(link.style.animation);
     }
   });
 });
@@ -56,10 +52,22 @@ document.onclick = function (e) {
     listLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
-        console.log(link.style.animation);
       }
     });
   } else if (e.target === list) {
     list.classList.add("active");
   }
 };
+
+const toMainPage = () => {
+  return (window.location.href = "index.html");
+};
+
+listLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const linkDirection = link.textContent;
+
+    localStorage.setItem("integrante-key", linkDirection);
+    toMainPage();
+  });
+});
