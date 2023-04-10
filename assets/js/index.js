@@ -52,20 +52,23 @@ window.addEventListener("resize", () => {
 });
 
 // Selectors
+// Front Page
 const navTitle = document.querySelector(".nav-title-container");
 const topPage = document.getElementById("top-page");
 const contactPage = document.getElementById("contact-page");
 const contactBtn = document.querySelector(".contact-button");
-const aboutPage = document.getElementById("about-page");
 const aboutBtn = document.querySelector(".about-button");
-const integranteContainer = document.querySelectorAll(".integrante-container");
 const listLinks = document.querySelectorAll("ul li");
-console.log(listLinks);
-const integrantesSection = document.querySelector(".integrantes");
 const list = document.querySelector("ul");
+const burgerMenu = document.querySelector(".burger-menu");
+// Inrtegrantes Section
+const integranteContainer = document.querySelectorAll(".integrante-container");
+const integrantesSection = document.querySelector(".integrantes");
+// Bio Section
+const aboutPage = document.getElementById("about-page");
+// Contact Section
 const form = document.querySelector(".form");
 const submitButton = document.querySelector(".submit-btn");
-const burgerMenu = document.querySelector(".burger-menu");
 // Functions
 
 document.onclick = function (e) {

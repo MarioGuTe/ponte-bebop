@@ -16,6 +16,11 @@ body {
 
 /* Header */
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 header {
   background: hsl(100 30% 15%);
   width: 100%;
@@ -25,7 +30,7 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 1000;
   padding: 20px;
 }
 
@@ -34,13 +39,85 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  z-index: 1;
+
+  z-index: 1000;
 }
 
 h1 {
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
+}
+
+.nav-title-container {
+  color: white;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.nav-title-container span {
+  color: hsl(30 80% 55%);
+}
+
+/* mobile menu */
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5em;
+  color: hsl(0 100% 100%/0.75);
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  background: hsl(100 30% 15%);
+  height: 100vh;
+  width: 60%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+}
+
+ul > li {
+  list-style: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  opacity: 0;
+}
+
+li:hover {
+  color: hsl(30 80% 55%);
+}
+
+.burger-menu {
+  cursor: pointer;
+  transform: translateX(0%);
+  transition: transform 0.9s ease-out;
+}
+
+.burger-menu div {
+  background-color: hsl(0 100% 100%);
+  height: 2px;
+  width: 18px;
+  margin: 4.5px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.active {
+  transform: translateX(0%);
+}
+
+@keyframes listLinkFade {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
 
 a:link {
@@ -60,16 +137,6 @@ footer i {
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
-}
-
-.nav-title-container {
-  color: white;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.nav-title-container span {
-  color: hsl(30 80% 55%);
 }
 
 /* main */
@@ -168,11 +235,29 @@ footer p {
   font-size: 1.5rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .card {
     display: grid;
     grid-template-columns: 30% 1fr;
     width: 60%;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    gap: 1em;
+    justify-content: flex-end;
+    transform: translateX(0%);
+    height: 100%;
+  }
+
+  ul > li {
+    opacity: 1;
+  }
+
+  .burger-menu {
+    display: none;
   }
 }
 
