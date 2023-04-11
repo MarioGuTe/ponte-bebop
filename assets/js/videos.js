@@ -28,3 +28,17 @@ burgerMenu.addEventListener("click", () => {
     }
   });
 });
+
+const toMainPage = () => {
+  return (window.location.href = "index.html");
+};
+
+listLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const linkDirection = link.textContent;
+
+    localStorage.setItem("integrante-key", linkDirection);
+
+    toMainPage();
+  });
+});

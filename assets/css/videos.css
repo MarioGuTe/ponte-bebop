@@ -6,14 +6,13 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   font-family: "Oswald", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
+body {
+  overflow-x: hidden;
+}
 /* Header */
 
 .resize-animation-stopper * {
@@ -130,6 +129,21 @@ a:visited {
   text-decoration: inherit;
   color: inherit;
   cursor: pointer;
+}
+
+/* main section */
+.videos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 100%;
+  border: 2px solid red;
+}
+
+.videos-container div {
+  margin: 0 auto;
 }
 
 /* Footer */
