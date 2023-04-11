@@ -177,6 +177,10 @@ const toIntegrantePage = () => {
   return (window.location.href = "integrante.html");
 };
 
+const toVideosPage = () => {
+  return (window.location.href = "videos.html");
+};
+
 integranteContainer.forEach((container) => {
   container.addEventListener("click", () => {
     integrantes.map((member) => {
@@ -216,6 +220,8 @@ listLinks.forEach((link) => {
       aboutPage.scrollIntoView({ behavior: "smooth" });
     } else if (link.textContent === "Contacto") {
       contactPage.scrollIntoView({ behavior: "smooth" });
+    } else if (link.textContent === "Videos") {
+      toVideosPage();
     }
   });
 });
