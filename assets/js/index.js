@@ -50,7 +50,6 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });
-
 // Selectors
 // Front Page
 const navTitle = document.querySelector(".nav-title-container");
@@ -70,6 +69,7 @@ const aboutPage = document.getElementById("about-page");
 const form = document.querySelector(".form");
 const submitButton = document.querySelector(".submit-btn");
 // Functions
+const modal = document.querySelector("#modal");
 
 const integrantePageDirection = localStorage.getItem("integrante-key");
 
@@ -142,11 +142,14 @@ function sendEmail(e) {
   contactName.value = "";
   contactEmail.value = "";
   contactMessage.value = "";
-
+  topPage.scrollIntoView({ behavior: "smooth" });
   emailjs
     .send("service_05bgfvb", "template_3wxl3dn", params)
     .then(function (res) {
-      alert("Success!" + res.status);
+      modal.showModal();
+      setTimeout(() => {
+        modal.close();
+      }, 5000);
     });
 }
 
@@ -217,4 +220,4 @@ listLinks.forEach((link) => {
   });
 });
 
-submitButton.addEventListener("click", sendEmail);
+form.addEventListener("submit", sendEmail);
