@@ -164,3 +164,24 @@ footer p {
 footer i {
   cursor: pointer;
 }
+
+@media (min-width: 600px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    gap: 1em;
+    justify-content: flex-end;
+    transform: translateX(0%);
+    height: 100%;
+  }
+
+  ul > li {
+    opacity: 1;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
