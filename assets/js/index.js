@@ -102,7 +102,6 @@ toContact();
 
 document.onclick = function (e) {
   e.stopPropagation();
-  console.log(e.target);
   if (e.target !== listLinks && e.target !== burgerMenu) {
     list.classList.remove("active");
     listLinks.forEach((link, index) => {

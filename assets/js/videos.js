@@ -29,6 +29,20 @@ burgerMenu.addEventListener("click", () => {
   });
 });
 
+document.onclick = function (e) {
+  e.stopPropagation();
+  if (e.target !== listLinks && e.target !== burgerMenu) {
+    list.classList.remove("active");
+    listLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      }
+    });
+  } else if (e.target === listLinks) {
+    list.classList.add("active");
+  }
+};
+
 const toMainPage = () => {
   return (window.location.href = "index.html");
 };

@@ -47,14 +47,15 @@ burgerMenu.addEventListener("click", () => {
 });
 
 document.onclick = function (e) {
-  if (e.target !== list && e.target !== burgerMenu) {
+  e.stopPropagation();
+  if (e.target !== listLinks && e.target !== burgerMenu) {
     list.classList.remove("active");
     listLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
       }
     });
-  } else if (e.target === list) {
+  } else if (e.target === listLinks) {
     list.classList.add("active");
   }
 };
