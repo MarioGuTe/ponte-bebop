@@ -80,7 +80,7 @@ ul {
   color: hsl(0 100% 100%/0.75);
   position: absolute;
   right: 0px;
-  top: 38px;
+  top: 39.4px;
   background: hsl(100 30% 15%);
   height: 100vh;
   width: 60%;
@@ -295,7 +295,7 @@ li:hover {
 /* Integrantes */
 .integrantes {
   min-height: 100%;
-  margin-top: 5%;
+  padding-top: 40px;
 }
 
 .title-container-integrantes {
@@ -303,7 +303,6 @@ li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 }
 
 .integrantes h2 {
@@ -313,7 +312,7 @@ li:hover {
 }
 
 .title-container-integrantes p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: hsl(100 30% 15%);
 }
@@ -321,10 +320,10 @@ li:hover {
 .img-section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 100px;
+  gap: 10px;
   min-height: 100%;
   width: 100%;
-  margin-top: 6%;
+  margin-top: 2%;
 }
 
 .img-text {
@@ -375,15 +374,19 @@ li:hover {
 .bio-container {
   min-height: 100%;
   text-align: center;
-  margin-top: 2%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .bio-text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 2em;
+  padding: 0.5em;
 }
 
 .bio-text-container h2 {
@@ -397,14 +400,15 @@ li:hover {
 }
 
 .bio-img-container {
-  padding: 8px;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 1em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .bio-img-container img {
-  width: 100%;
+  width: 90%;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -416,6 +420,7 @@ li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
 }
 
 .form {
@@ -428,6 +433,8 @@ li:hover {
   justify-content: center;
   padding-bottom: 2em;
   margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .form-title {
@@ -610,7 +617,6 @@ footer {
   color: white;
   background: hsl(100 30% 15%);
   padding: 8px;
-  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -722,11 +728,12 @@ footer i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 66px;
   }
 
   .integrante-container img {
-    height: 500px;
+    height: 100%;
   }
 
   .form {
