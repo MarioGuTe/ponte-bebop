@@ -418,7 +418,8 @@ li:hover {
 .contacto {
   min-height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding-top: 40px;
 }
@@ -433,7 +434,7 @@ li:hover {
   justify-content: center;
   padding-bottom: 2em;
   margin: 0 auto;
-  margin-top: 1em;
+  margin-top: 5em;
   margin-bottom: 1em;
 }
 
@@ -570,6 +571,35 @@ li:hover {
 
 .submit-btn {
   z-index: 1;
+}
+
+/* Datos de cotacto */
+.datos-contacto-card {
+  color: hsl(0 100% 100%/0.9);
+  background-color: hsl(30 80% 55%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.datos-contacto-card h2 {
+  font-size: 1.3rem;
+}
+
+.datos-contacto-body {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5px;
+}
+
+.datos-contacto-body h3 {
+  font-size: 1.125rem;
 }
 
 /* modal */
