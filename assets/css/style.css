@@ -175,6 +175,41 @@ li:hover {
   padding-top: 5%;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transition: all 2s ease;
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+}
+
+.icons-container.hidden {
+  opacity: 0;
+  filter: blur(1px);
+  transition: all 2s ease;
+  transition-delay: 600ms;
+}
+
+.icons-container.show {
+  filter: blur(0);
+  opacity: 1;
+}
+
+.btns-container.hidden {
+  opacity: 0;
+  filter: blur(1px);
+  transition: all 2s ease;
+  transition-delay: 1s;
+}
+
+.btns-container.show {
+  filter: blur(0);
+  opacity: 1;
+}
+
 .icons-btn-container {
   display: flex;
   flex-direction: column;
