@@ -210,6 +210,17 @@ li:hover {
   opacity: 1;
 }
 
+.integrante-container.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 2s ease;
+}
+
+.integrante-container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .icons-btn-container {
   display: flex;
   flex-direction: column;
