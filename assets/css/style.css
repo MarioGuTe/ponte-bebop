@@ -186,16 +186,6 @@ li:hover {
   opacity: 1;
 }
 
-.main-title-container.hidden {
-  opacity: 0;
-  transition: all 2s ease;
-  transition-delay: 400ms;
-}
-
-.main-title-container.show {
-  opacity: 1;
-}
-
 .icons-container.hidden {
   opacity: 0;
   transition: all 2s ease;
@@ -229,7 +219,7 @@ li:hover {
 
 .bio-text-container.hidden {
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: all 2s ease;
 }
 
