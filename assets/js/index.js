@@ -1,8 +1,9 @@
 const integrantes = [
   {
     name: "BENNY GÓMEZ",
-    description:
-      "Benny Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+    description: `Nacido en santiago y actualmente Baterista de sesión con experiencia en el mundo del jazz, soul, música latina y fusión. 
+      Egresado de la carrera de interpretación en jazz y música popular en el instituto profesional Projazz. 
+      Desde el 2014 dedicado al instrumento y hoy vinculado a varios proyectos de jazz como Sebastian Reyes Trio, el trío de Patricio Ramirez y Ciro Rubio Cuarteto entre otros, sumado a esto tambien imparte clases de batería de forma particular.`,
     image: "./assets/images/benny-gomez-full.JPG",
     small_image: "./assets/images/benny-small.png",
     instagram: "https://www.instagram.com/gmbenny_/",
