@@ -138,11 +138,9 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 24%; */
   gap: 3em;
   box-shadow: 5px 5px 5px hsl(100 30% 10% / 0.25);
   border-radius: 20px;
-  padding: 1.4em 1em;
 }
 
 .hidden {
@@ -170,6 +168,7 @@ a:visited {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  padding: 1.4em 1em;
 }
 
 .profile-name {
@@ -266,6 +265,20 @@ footer i {
 
   .burger-menu {
     display: none;
+  }
+  .profile-sidebar {
+    min-width: 120%;
+    height: 100%;
+  }
+
+  .profile-image {
+    border-radius: 0px;
+    border: none;
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
   }
 }
 

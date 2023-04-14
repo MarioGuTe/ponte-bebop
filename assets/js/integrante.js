@@ -29,6 +29,8 @@ const profileImg = document.querySelector(".profile-image");
 const memberInstagram = document.querySelector(".member-instagram");
 const memberMail = document.querySelector(".member-mail");
 const memberWhatsapp = document.querySelector(".member-whatsapp");
+const sourceSetImage = document.querySelector(".source-img");
+console.log(sourceSetImage);
 // Nav Selectors
 const listLinks = document.querySelectorAll("ul li");
 const list = document.querySelector("ul");
@@ -40,6 +42,7 @@ profileImg.src = memberObject.object_img_small;
 memberInstagram.href = memberObject.object_instagram;
 memberMail.href = memberObject.object_mail;
 memberWhatsapp.href = memberObject.object_whatsapp;
+sourceSetImage.srcset = memberObject.object_img;
 
 // Event Listeners
 burgerMenu.addEventListener("click", () => {
@@ -83,3 +86,8 @@ listLinks.forEach((link) => {
     toMainPage();
   });
 });
+
+// let windowWidth = window.innerWidth;
+// if (windowWidth >= 600) {
+//   profileImg.src = "./assets/images/benny-gomez-full.JPG";
+// }
