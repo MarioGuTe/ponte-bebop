@@ -78,12 +78,20 @@ const toMainPage = () => {
   return (window.location.href = "index.html");
 };
 
+const toVideosPage = () => {
+  return (window.location.href = "videos.html");
+};
+
 listLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     const linkDirection = link.textContent;
 
-    localStorage.setItem("integrante-key", linkDirection);
-    toMainPage();
+    if (linkDirection === "Videos") {
+      toVideosPage();
+    } else {
+      localStorage.setItem("integrante-key", linkDirection);
+      toMainPage();
+    }
   });
 });
 
