@@ -85,7 +85,35 @@ const submitButton = document.querySelector(".submit-btn");
 // Functions
 const modal = document.querySelector("#modal");
 
+//localStorage de integrante.html para reload en lugar específico de página principal
 const integrantePageDirection = localStorage.getItem("integrante-key");
+
+// Functions
+
+function sendEmail(e) {
+  e.preventDefault();
+  const contactName = document.querySelector(".contact-name");
+  const contactEmail = document.querySelector(".contact-email");
+  const contactMessage = document.querySelector(".contact-message");
+
+  var params = {
+    from_name: contactName.value,
+    email_id: contactEmail.value,
+    message: contactMessage.value,
+  };
+  contactName.value = "";
+  contactEmail.value = "";
+  contactMessage.value = "";
+  topPage.scrollIntoView({ behavior: "smooth" });
+  emailjs
+    .send("service_05bgfvb", "template_3wxl3dn", params)
+    .then(function (res) {
+      modal.showModal();
+      setTimeout(() => {
+        modal.close();
+      }, 5000);
+    });
+}
 
 function toBio() {
   if (integrantePageDirection === "Bio") {
@@ -114,6 +142,8 @@ function toContact() {
 
 toContact();
 
+// Event Listeners
+
 document.onclick = function (e) {
   e.stopPropagation();
   if (e.target !== listLinks && e.target !== burgerMenu) {
@@ -130,7 +160,6 @@ document.onclick = function (e) {
 
 burgerMenu.addEventListener("click", () => {
   list.classList.toggle("active");
-
   // animation links
   listLinks.forEach((link, index) => {
     if (link.style.animation) {
@@ -143,49 +172,19 @@ burgerMenu.addEventListener("click", () => {
   });
 });
 
-function sendEmail(e) {
-  e.preventDefault();
-  const contactName = document.querySelector(".contact-name");
-  const contactEmail = document.querySelector(".contact-email");
-  const contactMessage = document.querySelector(".contact-message");
-
-  var params = {
-    from_name: contactName.value,
-    email_id: contactEmail.value,
-    message: contactMessage.value,
-  };
-  contactName.value = "";
-  contactEmail.value = "";
-  contactMessage.value = "";
-  topPage.scrollIntoView({ behavior: "smooth" });
-  emailjs
-    .send("service_05bgfvb", "template_3wxl3dn", params)
-    .then(function (res) {
-      modal.showModal();
-      setTimeout(() => {
-        modal.close();
-      }, 5000);
-    });
-}
-
-// Event Listeners
-
 navTitle.addEventListener("click", (e) => {
   e.preventDefault();
   topPage.scrollIntoView({ behavior: "smooth" });
-  console.log("1");
 });
 
 contactBtn.addEventListener("click", (e) => {
   e.preventDefault();
   contactPage.scrollIntoView({ behavior: "smooth" });
-  console.log("2");
 });
 
 aboutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   aboutPage.scrollIntoView({ behavior: "smooth" });
-  console.log("3");
 });
 
 const toIntegrantePage = () => {
