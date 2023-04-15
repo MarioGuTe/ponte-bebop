@@ -13,10 +13,14 @@ const listLinks = document.querySelectorAll("ul li");
 const list = document.querySelector("ul");
 const burgerMenu = document.querySelector(".burger-menu");
 
+// Functions
+const toMainPage = () => {
+  return (window.location.href = "index.html");
+};
+
 // Event Listeners
 burgerMenu.addEventListener("click", () => {
   list.classList.toggle("active");
-
   // animation links
   listLinks.forEach((link, index) => {
     if (link.style.animation) {
@@ -43,16 +47,10 @@ document.onclick = function (e) {
   }
 };
 
-const toMainPage = () => {
-  return (window.location.href = "index.html");
-};
-
 listLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
+  link.addEventListener("click", () => {
     const linkDirection = link.textContent;
-
     localStorage.setItem("integrante-key", linkDirection);
-
     toMainPage();
   });
 });
