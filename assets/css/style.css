@@ -647,7 +647,7 @@ dialog p {
 footer {
   color: white;
   background: hsl(100 30% 15%);
-  padding: 8px;
+  padding: 8px 0 26px 0;
   width: 100%;
   display: flex;
   align-items: center;
